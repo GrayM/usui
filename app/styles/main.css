@@ -1,0 +1,426 @@
+$icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+// bower:scss
+@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$colorMain: #443533;
+@font-face {
+    font-family: Brushtip;
+    src: url(../fonts/BTTTRIAL.otf);
+}
+
+
+/* Table of Contents
+-body
+-Link Styles
+-Layout
+-Logo
+-Slideshow
+-Top Section
+-Middle links
+-Announcements
+-Headers
+*/
+
+body {
+    margin: 0;
+}
+
+
+/* =Link Styles */
+
+.navLinks ul li a {
+    color: #000000;
+    text-decoration: none;
+    &:hover {
+        color: #BFB4BB;
+        transition: .5s;
+    }
+}
+
+.announcementOne a {
+    text-decoration: none;
+    font: normal normal normal 13px/1.4em 'Noticia Text', serif;
+    transition: color 0.4s ease 0s;
+    color: #000000;
+    white-space: nowrap;
+}
+
+
+/* =Layout */
+
+.topContent {
+    width: 980px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.main-row {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.mainHeader {
+    background-color: #9F0A23;
+    height: 310px;
+    text-align: center;
+    margin-bottom: -36px;
+}
+
+.col-md-9 {
+    width: 80%;
+    margin-right: -7px;
+}
+
+.col-md-3.slash,
+.col-md-9.numberDate {
+    min-height: 0;
+    border: none;
+    padding: 0;
+    font: normal normal normal 21px/1.4em 'Times New Roman', times, serif;
+}
+
+.col-md-3.slash {
+    padding-top: 10px;
+    padding-left: 8px;
+}
+
+.col-md-9.numberDate {
+    font-size: 40px;
+    font-family: tahoma;
+    margin-top: -12px;
+}
+
+.news {
+    min-height: 800px;
+    margin-top: 15px;
+    border: 1px dotted black;
+    border-top: none;
+    border-bottom: none;
+}
+
+.newsColumn {
+    width: 190px;
+    padding: 0;
+    margin-top:2px;
+}
+
+.col-md-4,
+.col-md-6 {
+    padding: 0;
+}
+
+.col-md-4.video-box {
+    min-height: 200px;
+}
+
+.divider {
+    border-left: 1px dotted #38546d;
+    height: 100px;
+    position: absolute;
+    right: 15px;
+    bottom: -15px;
+}
+
+
+/* =Logo */
+
+.logo {
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+.usui h3 {
+    color: #000000;
+    margin-top: 0;
+    font-family: Brushtip;
+    color: #F5D56B;
+    text-shadow: 3px 3px 3px #000;
+    font-size: 28px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h5 {
+    font-family: Noticia Text;
+    color: black;
+    margin-top: 0;
+}
+
+
+/* =Slideshow */
+
+.container {
+    background-color: black;
+    padding-left: 0;
+    padding-right: 0;
+    width: 488px;
+    height: 355px;
+    overflow: hidden;
+    box-shadow: 0px 2px 2px gray;
+    position: relative;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+}
+
+.container img:nth-child(1) {
+    height: 365px;
+    width: 620px;
+    margin-left: -60px;
+}
+
+.container img:nth-child(3) {
+    height: 370px;
+    width: 515px;
+    margin-left: -10px;
+    margin-top: -5px;
+}
+
+.photo {
+    position: absolute;
+    animation: round 20s infinite;
+    opacity: 0;
+}
+
+@keyframes round {
+    25% {
+        opacity: 1;
+    }
+    40% {
+        opacity: 0;
+    }
+}
+
+.container {
+    img:nth-child(4) {
+        animation-delay: 0s;
+    }
+    img:nth-child(3) {
+        animation-delay: 5s;
+    }
+    img:nth-child(2) {
+        animation-delay: 10s;
+    }
+    img:nth-child(1) {
+        animation-delay: 15s;
+    }
+}
+
+
+/* =Nav */
+
+.navLinks {
+    width: 950px;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    margin: 0 auto;
+    ul {
+        margin-bottom: 0;
+        li {
+            display: inline-block;
+            padding: 8px;
+            border-right: 1px solid #000000;
+            line-height: 10px;
+        }
+        .contact {
+            line-height: 20px;
+            border-right: 0px;
+        }
+    }
+}
+
+.footImage,
+.footer {
+    min-height: 250px;
+    border: 1px dotted black;
+}
+
+
+/* =Middle links */
+
+.col-md-8.links {
+    min-height: 130px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 30px;
+    border-top: 1px dotted black;
+    border-bottom: 1px dotted black;
+    position: absolute;
+    left: 275px;
+    width: 490px;
+    margin-top: -75px;
+    img {
+        border: 2px solid #6C6160;
+        border-radius: 50%;
+    }
+}
+
+.iconBox {
+    position: relative;
+}
+
+.iconText {
+    margin-top: 10px;
+    color: #553533;
+    width: 60px;
+}
+
+
+/* =Announcements */
+
+.announcements {
+    padding-left: 0;
+    margin-right: 15px;
+    .announcementContainer {
+        margin: 10px;
+        width: 250px;
+        p {
+            color: #6C616F;
+        }
+        .dateBox {
+            padding: 20px;
+            border: 1px solid black;
+            height: 72px;
+        }
+        .dateText {
+            border: 1px solid black;
+            height: 72px;
+            border-left: 0;
+            padding-top: 5px;
+            padding-right: 0;
+            padding-left: 5px;
+            margin-bottom: 8px;
+            .announcementOne {
+                margin-bottom: 0;
+                font-size: 14px;
+                margin-top: 0px;
+            }
+        }
+    }
+    #miniHeader {
+      margin-top:3px;
+        margin-bottom: 20px;
+        background-color: #443633;
+        height: 33px;
+        width: 75%;
+        padding: 8px;
+        padding-left: 10px;
+        margin-left: 5%;
+        color: #ffffff;
+    }
+}
+
+/* =Headers */
+
+#schoolHeader,
+#ihrHeader {
+    background-color: #443633;
+    height: 33px;
+    width: 75%;
+    padding: 8px;
+    padding-left: 10px;
+    margin-left: 5%;
+    margin-top:2px;
+    color: #ffffff;
+}
+
+#newsHeader {
+    background-color: #443633;
+    height: 33px;
+    width: 100px;
+    padding: 8px;
+    padding-left: 10px;
+    // margin-left:0%;
+    color: #ffffff;
+}
+
+.noPadding {
+    padding: 0;
+}
+
+.imgBelow {
+    min-height: 165px;
+    position: absolute;
+    left: 265px;
+}
+
+.col-md-7.smallImg {
+    width: 265px;
+    margin-left: 10px;
+    padding-left: 0;
+}
+
+.col-md-5.smallImg {
+    width: 225px;
+    padding-right: 0;
+}
+
+.smallImg {
+    padding: 10px;
+    overflow: hidden;
+    max-height: 165px;
+    .secondImg {
+        width: 100%;
+    }
+    img {
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.25);
+        min-height: 190px;
+    }
+}
+
+.row .ourSchool {
+    min-height: 200px;
+    width: 29%;
+    margin-left: 10px;
+    margin-top: -47px;
+}
+
+#schoolHeader {
+    width: 205px;
+    margin-left: 0;
+}
+
+.grayBar {
+    background-color: #B0A9A9;
+    height: 35px;
+    width: 250px;
+    margin: 7px;
+    margin-left: 0;
+    margin-top: 0;
+    padding: 7px;
+    padding-left: 15px;
+    &:hover {
+        background-color: #9F0A23;
+        transition: .5s;
+    }
+}
+
+a.sideLinks {
+    text-decoration: none;
+    color: $colorMain;
+    &:hover {
+        color: white;
+    }
+}
+
+.video-box {
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#ihrHeader {
+    width: 90%;
+    margin-left: 0;
+}
+
+.footImage {
+    background: url(http://placeimg.com/980/250/any);
+}
+
+.footer {
+    background-color: #443633;
+}
